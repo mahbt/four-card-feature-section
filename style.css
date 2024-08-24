@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-very-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+  --color-very-light-gray: hsl(0, 0%, 98%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  height: 100vh;
+
+  background: var(--color-very-light-gray);
+  color: var(--color-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.features-container {
+  height: auto;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+/* section header */
+.features-container .section-header {
+  width: 500px;
+  text-align: center;
+}
+.section-header h1 {
+  margin-bottom: 15px;
+  font-size: 35px;
+  color: var(--color-very-dark-blue);
+  span {
+    font-weight: 200;
+  }
+}
+/* Cards */
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.card {
+  width: 340px;
+  height: 247px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 35px 30px 30px;
+  border-top: 3px solid var(--color-cyan);
+  box-shadow: 5px 5px 20px 0 #dde5f0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.cards-group .card:nth-of-type(1) {
+  border-color: var(--color-red);
+  margin-bottom: 30px;
+}
+
+.cards-group .card:nth-of-type(2) {
+  border-color: var(--color-orange);
+}
+.card:nth-of-type(3) {
+  border-color: var(--color-blue);
+}
+.card h2 {
+  color: var(--color-very-dark-blue);
+  font-weight: 600;
+  font-size: 20px;
+}
+.card p {
+  font-size: 13px;
+  padding-right: 55px;
+  line-height: 1.6;
+}
+.card img {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+@media (max-width: 375px) {
+  .features-container {
+    width: 310px;
+    gap: 80px;
+  }
+  .features-container .section-header {
+    width: 100%;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+  .section-header h1 {
+    font-size: 24px;
+  }
+}
